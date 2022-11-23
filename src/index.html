@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="fluid-container">
+      <nav class="navbar navbar-expand-lg bg-light navbar-custom">
+        <div class="container-fluid">
+          <a class="navbar-brand navbar-brand-custom" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-- Start Home Section ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+      <section class="home" id="home">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="intro">
+                <h1 class="mb-5">
+                  <span class="intro--title">Your Fav Online Code Editor!</span>
+                  <span class="intro--quote">
+                    <img
+                      class="l-q"
+                      width="15"
+                      src="./imgs/iconmonstr-quote-3-240.png"
+                      alt=""
+                    />&nbsp;Code Editor Programmer's Second Home
+                    <img
+                      class="r-q"
+                      width="15"
+                      src="./imgs/iconmonstr-quote-3-240.png"
+                      alt=""
+                    />
+                  </span>
+                  <div style="position: relative">
+                    <span class="arrow">></span>
+                    <code id="typing" class="intro--desc"></code>
+                  </div>
+                </h1>
+                <a href="" class="btn-custom-under"
+                  >About <span>&rarr;</span></a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 mt-2">
+              <div class="text-center">
+                <img
+                  src="./imgs/coding3.png"
+                  alt="Coding "
+                  class="img-custom img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,224L60,224C120,224,240,224,360,197.3C480,171,600,117,720,128C840,139,960,213,1080,213.3C1200,213,1320,139,1380,101.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,320L0,96L36.9,96L36.9,256L73.8,256L73.8,128L110.8,128L110.8,128L147.7,128L147.7,0L184.6,0L184.6,160L221.5,160L221.5,160L258.5,160L258.5,128L295.4,128L295.4,288L332.3,288L332.3,256L369.2,256L369.2,288L406.2,288L406.2,192L443.1,192L443.1,256L480,256L480,128L516.9,128L516.9,192L553.8,192L553.8,256L590.8,256L590.8,64L627.7,64L627.7,160L664.6,160L664.6,192L701.5,192L701.5,160L738.5,160L738.5,0L775.4,0L775.4,224L812.3,224L812.3,32L849.2,32L849.2,96L886.2,96L886.2,32L923.1,32L923.1,0L960,0L960,320L996.9,320L996.9,288L1033.8,288L1033.8,64L1070.8,64L1070.8,128L1107.7,128L1107.7,96L1144.6,96L1144.6,64L1181.5,64L1181.5,256L1218.5,256L1218.5,64L1255.4,64L1255.4,320L1292.3,320L1292.3,160L1329.2,160L1329.2,64L1366.2,64L1366.2,160L1403.1,160L1403.1,256L1440,256L1440,320L1403.1,320L1403.1,320L1366.2,320L1366.2,320L1329.2,320L1329.2,320L1292.3,320L1292.3,320L1255.4,320L1255.4,320L1218.5,320L1218.5,320L1181.5,320L1181.5,320L1144.6,320L1144.6,320L1107.7,320L1107.7,320L1070.8,320L1070.8,320L1033.8,320L1033.8,320L996.9,320L996.9,320L960,320L960,320L923.1,320L923.1,320L886.2,320L886.2,320L849.2,320L849.2,320L812.3,320L812.3,320L775.4,320L775.4,320L738.5,320L738.5,320L701.5,320L701.5,320L664.6,320L664.6,320L627.7,320L627.7,320L590.8,320L590.8,320L553.8,320L553.8,320L516.9,320L516.9,320L480,320L480,320L443.1,320L443.1,320L406.2,320L406.2,320L369.2,320L369.2,320L332.3,320L332.3,320L295.4,320L295.4,320L258.5,320L258.5,320L221.5,320L221.5,320L184.6,320L184.6,320L147.7,320L147.7,320L110.8,320L110.8,320L73.8,320L73.8,320L36.9,320L36.9,320L0,320L0,320Z"
+          ></path>
+        </svg> -->
+      </section>
+
+      <section class="features" id="features">
+        <h1 class="text-center">Features</h1>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

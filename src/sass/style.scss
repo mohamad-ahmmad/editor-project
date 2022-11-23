@@ -1,0 +1,15 @@
+@import "./custom";
+
+@import "./components/buttons";
+@import "./sections/navbar";
+@import "./sections/home";
+@import "./sections/features";
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  color: black;
+  background-color: $green-2;
+}
