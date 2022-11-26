@@ -1,0 +1,55 @@
+.features {
+  @include media-breakpoint-up(md) {
+    padding-top: 5.8rem;
+  }
+  @include media-breakpoint-down(md) {
+    .ZTitle {
+      text-align: center;
+      vertical-align: center;
+      justify-content: center;
+    }
+    .ZText {
+      text-align: center;
+      vertical-align: center;
+      justify-content: center;
+    }
+    .zeroone {
+      display: none;
+    }
+  }
+  h1 {
+    font-family: "Poppins";
+    font-weight: 700;
+  }
+  .text-center {
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  h1.text-center::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 180px;
+    background-color: $green-0;
+    position: absolute;
+    left: calc(50% - 90px);
+    bottom: 1.5px;
+  }
+  h1.text-center::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 40px;
+    background-color: $green-2;
+    position: absolute;
+    left: calc(50% - 20px);
+    bottom: 0px;
+  }
+  .row {
+    font-family: "Poppins";
+  }
+  .ZTitle {
+    font-weight: 700;
+  }
+}

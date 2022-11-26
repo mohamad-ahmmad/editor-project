@@ -1,0 +1,16 @@
+.navbar {
+  background-image: linear-gradient(to right, $secondary, $secondary);
+  padding: 0.4rem 4rem;
+  box-shadow: 0 0.2px 10px rgba($primary, 0.1);
+  .navbar-brand-custom {
+    color: $white;
+  }
+  ul {
+    li {
+      a {
+        color: $white;
+        font-family: "Poppins";
+      }
+    }
+  }
+}

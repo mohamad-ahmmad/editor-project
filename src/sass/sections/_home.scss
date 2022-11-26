@@ -1,0 +1,83 @@
+.home {
+  height: auto;
+
+  .img-custom {
+    @include media-breakpoint-down(md) {
+      margin-top: 4rem;
+      width: 60%;
+    }
+  }
+
+  .typed_cursor {
+    color: white;
+  }
+
+  & > div {
+    padding: 5rem 0 0 0;
+  }
+
+  background-image: linear-gradient(to bottom, $secondary, $green-0);
+
+  .intro {
+    @include media-breakpoint-up(md) {
+      padding-top: 5.8rem;
+    }
+    margin-left: 1rem;
+    font-family: "Poppins";
+
+    & > h1 {
+      line-height: 1.1;
+    }
+
+    &--title {
+      color: $white;
+      letter-spacing: -0.5px;
+      font-weight: 700;
+      display: block;
+      font-size: 4.8rem;
+    }
+    &--quote {
+      color: white;
+      font-size: 1rem;
+      font-family: "Poppins";
+      letter-spacing: 1.5px;
+      position: relative;
+      .l-q {
+        position: relative;
+        bottom: 10px;
+        transform: rotate(180deg);
+      }
+      .r-q {
+        transform: translateY(-50%);
+      }
+    }
+    &--desc {
+      color: $primary;
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .arrow {
+    display: none;
+    font-weight: 700;
+    color: whitesmoke;
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    animation: flashing 0.4s ease 0.2s infinite alternate;
+    @include media-breakpoint-up(md) {
+      display: inline;
+    }
+  }
+}
+
+@keyframes flashing {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

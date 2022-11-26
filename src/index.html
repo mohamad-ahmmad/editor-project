@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="fluid-container">
+      <nav class="navbar navbar-expand-lg bg-light navbar-custom">
+        <div class="container-fluid">
+          <a class="navbar-brand navbar-brand-custom" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-- Start Home Section ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+      <section class="home" id="home">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="intro">
+                <h1 class="mb-5">
+                  <span class="intro--title">Your Fav Online Code Editor!</span>
+                  <span class="intro--quote">
+                    <img
+                      class="l-q"
+                      width="15"
+                      src="./imgs/iconmonstr-quote-3-240.png"
+                      alt=""
+                    />&nbsp;Code Editor Programmer's Second Home
+                    <img
+                      class="r-q"
+                      width="15"
+                      src="./imgs/iconmonstr-quote-3-240.png"
+                      alt=""
+                    />
+                  </span>
+                  <div style="position: relative">
+                    <span class="arrow">></span>
+                    <code id="typing" class="intro--desc"></code>
+                  </div>
+                </h1>
+                <a href="" class="btn-custom-under"
+                  >About <span>&rarr;</span></a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 mt-2">
+              <div class="text-center">
+                <img
+                  src="./imgs/coding3.png"
+                  alt="Coding "
+                  class="img-custom img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,224L60,224C120,224,240,224,360,197.3C480,171,600,117,720,128C840,139,960,213,1080,213.3C1200,213,1320,139,1380,101.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,320L0,96L36.9,96L36.9,256L73.8,256L73.8,128L110.8,128L110.8,128L147.7,128L147.7,0L184.6,0L184.6,160L221.5,160L221.5,160L258.5,160L258.5,128L295.4,128L295.4,288L332.3,288L332.3,256L369.2,256L369.2,288L406.2,288L406.2,192L443.1,192L443.1,256L480,256L480,128L516.9,128L516.9,192L553.8,192L553.8,256L590.8,256L590.8,64L627.7,64L627.7,160L664.6,160L664.6,192L701.5,192L701.5,160L738.5,160L738.5,0L775.4,0L775.4,224L812.3,224L812.3,32L849.2,32L849.2,96L886.2,96L886.2,32L923.1,32L923.1,0L960,0L960,320L996.9,320L996.9,288L1033.8,288L1033.8,64L1070.8,64L1070.8,128L1107.7,128L1107.7,96L1144.6,96L1144.6,64L1181.5,64L1181.5,256L1218.5,256L1218.5,64L1255.4,64L1255.4,320L1292.3,320L1292.3,160L1329.2,160L1329.2,64L1366.2,64L1366.2,160L1403.1,160L1403.1,256L1440,256L1440,320L1403.1,320L1403.1,320L1366.2,320L1366.2,320L1329.2,320L1329.2,320L1292.3,320L1292.3,320L1255.4,320L1255.4,320L1218.5,320L1218.5,320L1181.5,320L1181.5,320L1144.6,320L1144.6,320L1107.7,320L1107.7,320L1070.8,320L1070.8,320L1033.8,320L1033.8,320L996.9,320L996.9,320L960,320L960,320L923.1,320L923.1,320L886.2,320L886.2,320L849.2,320L849.2,320L812.3,320L812.3,320L775.4,320L775.4,320L738.5,320L738.5,320L701.5,320L701.5,320L664.6,320L664.6,320L627.7,320L627.7,320L590.8,320L590.8,320L553.8,320L553.8,320L516.9,320L516.9,320L480,320L480,320L443.1,320L443.1,320L406.2,320L406.2,320L369.2,320L369.2,320L332.3,320L332.3,320L295.4,320L295.4,320L258.5,320L258.5,320L221.5,320L221.5,320L184.6,320L184.6,320L147.7,320L147.7,320L110.8,320L110.8,320L73.8,320L73.8,320L36.9,320L36.9,320L0,320L0,320Z"
+          ></path>
+        </svg> -->
+      </section>
+      <!-- FEATURES START-->
+      <section class="features" id="features">
+        <h1 class="text-center">Features</h1>
+        <div
+          class="container-fluid text-center justify-content-start align-items-center h-100"
+        >
+          <div class="row align-items-center">
+            <div class="col-md-7">
+              <img
+                width="500rem"
+                src="./imgs/Arranging.png"
+                alt="Arranging Files"
+                class="imgA img-custom img-fluid"
+              />
+            </div>
+            <div class="col-md-3">
+              <div class="text-start fs-1 row ZTitle">Oragnaized</div>
+              <div class="ZText text-start row col-md-9">
+                This website is completly free to use! You can compile your
+                codes without having to pay anything! All you have to do is sign
+                up then you are ready to go!
+              </div>
+              <div
+                class="col-mid-7"
+                style="position: relative; left: -1rem; width: 18rem"
+              >
+                <svg
+                  class="zeroone"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1440 320"
+                >
+                  <path
+                    fill="#006a4f"
+                    fill-opacity="0.8"
+                    d="M0,32L0,320L36.9,320L36.9,256L73.8,256L73.8,64L110.8,64L110.8,160L147.7,160L147.7,96L184.6,96L184.6,32L221.5,32L221.5,256L258.5,256L258.5,160L295.4,160L295.4,224L332.3,224L332.3,96L369.2,96L369.2,128L406.2,128L406.2,256L443.1,256L443.1,32L480,32L480,160L516.9,160L516.9,288L553.8,288L553.8,160L590.8,160L590.8,32L627.7,32L627.7,96L664.6,96L664.6,32L701.5,32L701.5,32L738.5,32L738.5,320L775.4,320L775.4,96L812.3,96L812.3,128L849.2,128L849.2,32L886.2,32L886.2,192L923.1,192L923.1,160L960,160L960,32L996.9,32L996.9,32L1033.8,32L1033.8,96L1070.8,96L1070.8,160L1107.7,160L1107.7,288L1144.6,288L1144.6,160L1181.5,160L1181.5,256L1218.5,256L1218.5,160L1255.4,160L1255.4,96L1292.3,96L1292.3,256L1329.2,256L1329.2,224L1366.2,224L1366.2,320L1403.1,320L1403.1,160L1440,160L1440,0L1403.1,0L1403.1,0L1366.2,0L1366.2,0L1329.2,0L1329.2,0L1292.3,0L1292.3,0L1255.4,0L1255.4,0L1218.5,0L1218.5,0L1181.5,0L1181.5,0L1144.6,0L1144.6,0L1107.7,0L1107.7,0L1070.8,0L1070.8,0L1033.8,0L1033.8,0L996.9,0L996.9,0L960,0L960,0L923.1,0L923.1,0L886.2,0L886.2,0L849.2,0L849.2,0L812.3,0L812.3,0L775.4,0L775.4,0L738.5,0L738.5,0L701.5,0L701.5,0L664.6,0L664.6,0L627.7,0L627.7,0L590.8,0L590.8,0L553.8,0L553.8,0L516.9,0L516.9,0L480,0L480,0L443.1,0L443.1,0L406.2,0L406.2,0L369.2,0L369.2,0L332.3,0L332.3,0L295.4,0L295.4,0L258.5,0L258.5,0L221.5,0L221.5,0L184.6,0L184.6,0L147.7,0L147.7,0L110.8,0L110.8,0L73.8,0L73.8,0L36.9,0L36.9,0L0,0L0,0Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center justify-content-end">
+            <div class="col-md-3">
+              <div class="text-start fs-1 row ZTitle">Free to use!</div>
+              <div class="ZText text-start row col-md-9">
+                We keep all your projects in your workshop saved and organized,
+                so that you can easily open them and edit them
+              </div>
+              <div
+                class="col-mid-7"
+                style="position: relative; left: -1rem; width: 18rem"
+              >
+                <svg
+                  class="zeroone"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1440 320"
+                >
+                  <path
+                    fill="#006a4f"
+                    fill-opacity="0.8"
+                    d="M0,128L0,288L37.9,288L37.9,64L75.8,64L75.8,96L113.7,96L113.7,32L151.6,32L151.6,224L189.5,224L189.5,192L227.4,192L227.4,320L265.3,320L265.3,160L303.2,160L303.2,320L341.1,320L341.1,96L378.9,96L378.9,128L416.8,128L416.8,128L454.7,128L454.7,128L492.6,128L492.6,128L530.5,128L530.5,160L568.4,160L568.4,64L606.3,64L606.3,288L644.2,288L644.2,224L682.1,224L682.1,288L720,288L720,224L757.9,224L757.9,192L795.8,192L795.8,160L833.7,160L833.7,64L871.6,64L871.6,64L909.5,64L909.5,192L947.4,192L947.4,256L985.3,256L985.3,256L1023.2,256L1023.2,64L1061.1,64L1061.1,32L1098.9,32L1098.9,160L1136.8,160L1136.8,64L1174.7,64L1174.7,128L1212.6,128L1212.6,224L1250.5,224L1250.5,128L1288.4,128L1288.4,64L1326.3,64L1326.3,96L1364.2,96L1364.2,160L1402.1,160L1402.1,192L1440,192L1440,0L1402.1,0L1402.1,0L1364.2,0L1364.2,0L1326.3,0L1326.3,0L1288.4,0L1288.4,0L1250.5,0L1250.5,0L1212.6,0L1212.6,0L1174.7,0L1174.7,0L1136.8,0L1136.8,0L1098.9,0L1098.9,0L1061.1,0L1061.1,0L1023.2,0L1023.2,0L985.3,0L985.3,0L947.4,0L947.4,0L909.5,0L909.5,0L871.6,0L871.6,0L833.7,0L833.7,0L795.8,0L795.8,0L757.9,0L757.9,0L720,0L720,0L682.1,0L682.1,0L644.2,0L644.2,0L606.3,0L606.3,0L568.4,0L568.4,0L530.5,0L530.5,0L492.6,0L492.6,0L454.7,0L454.7,0L416.8,0L416.8,0L378.9,0L378.9,0L341.1,0L341.1,0L303.2,0L303.2,0L265.3,0L265.3,0L227.4,0L227.4,0L189.5,0L189.5,0L151.6,0L151.6,0L113.7,0L113.7,0L75.8,0L75.8,0L37.9,0L37.9,0L0,0L0,0Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <img
+                width="500rem"
+                src="./imgs/Free.png"
+                alt="Arranging Files"
+                class="imgA img-custom img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-7">
+            <img
+              width="500rem"
+              src="./imgs/Arranging.png"
+              alt="Arranging Files"
+              class="imgA img-custom img-fluid"
+            />
+          </div>
+          <div class="col-md-3">
+            <div class="text-start fs-1 row ZTitle">Language Support</div>
+            <div class="ZText text-start row col-md-9">
+              We offer you many programming languages that you can compile and
+              run, such as Java, C++, python and more!
+            </div>
+            <div
+              class="col-mid-7"
+              style="position: relative; left: -1rem; width: 18rem"
+            >
+              <svg
+                class="zeroone"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+              >
+                <path
+                  fill="#006a4f"
+                  fill-opacity="0.8"
+                  d="M0,224L0,96L51.4,96L51.4,160L102.9,160L102.9,160L154.3,160L154.3,224L205.7,224L205.7,32L257.1,32L257.1,256L308.6,256L308.6,288L360,288L360,96L411.4,96L411.4,128L462.9,128L462.9,128L514.3,128L514.3,96L565.7,96L565.7,224L617.1,224L617.1,64L668.6,64L668.6,256L720,256L720,96L771.4,96L771.4,96L822.9,96L822.9,96L874.3,96L874.3,224L925.7,224L925.7,64L977.1,64L977.1,32L1028.6,32L1028.6,32L1080,32L1080,320L1131.4,320L1131.4,64L1182.9,64L1182.9,160L1234.3,160L1234.3,288L1285.7,288L1285.7,160L1337.1,160L1337.1,160L1388.6,160L1388.6,64L1440,64L1440,0L1388.6,0L1388.6,0L1337.1,0L1337.1,0L1285.7,0L1285.7,0L1234.3,0L1234.3,0L1182.9,0L1182.9,0L1131.4,0L1131.4,0L1080,0L1080,0L1028.6,0L1028.6,0L977.1,0L977.1,0L925.7,0L925.7,0L874.3,0L874.3,0L822.9,0L822.9,0L771.4,0L771.4,0L720,0L720,0L668.6,0L668.6,0L617.1,0L617.1,0L565.7,0L565.7,0L514.3,0L514.3,0L462.9,0L462.9,0L411.4,0L411.4,0L360,0L360,0L308.6,0L308.6,0L257.1,0L257.1,0L205.7,0L205.7,0L154.3,0L154.3,0L102.9,0L102.9,0L51.4,0L51.4,0L0,0L0,0Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
