@@ -11,6 +11,25 @@
         color: $white;
         font-family: "Poppins";
       }
+      .btn-login {
+        &:hover {
+          color: $white;
+        }
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+      /* SIGN UP*/
+      .sign-up {
+        color: $primary;
+        &:hover {
+          background: none;
+          color: tint-color($primary, 25%);
+        }
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
     }
   }
 }
