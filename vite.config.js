@@ -2,18 +2,20 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 const root = resolve(__dirname, "src");
-const login = resolve(root, "login");
+
 const outDir = resolve(__dirname, "dist");
 
 export default defineConfig({
-  root: root,
+  root,
   build: {
-    outDir: outDir,
+    outDir,
     emptyOutDir: true,
     cssCodeSplit: false,
     rollupOptions: {
-      root: root,
-      login: login,
+      input: {
+        main: resolve(root, "index.html"),
+        login: resolve(root, "login", "index.html"),
+      },
     },
   },
   server: {
