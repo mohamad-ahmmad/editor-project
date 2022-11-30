@@ -10,3 +10,12 @@
     border-bottom: 0.1rem solid $primary;
   }
 }
+.btn-thic {
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  transition: 0.5s;
+  &:hover {
+    color: $white;
+  }
+}

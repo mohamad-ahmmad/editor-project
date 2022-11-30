@@ -3,12 +3,6 @@ $purple-dark: #9926f0;
 $purple-light: #bb6ef5;
 $pink: #d122e3;
 
-// *,
-// *::after,
-// *::before {
-//   font-family: "Rubik", sans-serif;
-// }
-
 $green-0: #004241;
 $green-1: #006a4f;
 $green-2: #0fcb83;
@@ -35,4 +29,4 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap");
