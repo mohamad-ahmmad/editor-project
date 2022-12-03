@@ -1,14 +1,8 @@
 .features {
+  width: 90%;
+  margin: 0 auto;
   font-family: "Poppins";
   padding-bottom: 5rem;
-  @include media-breakpoint-up(md) {
-    padding-top: 5.8rem;
-  }
-  @include media-breakpoint-down(md) {
-    .zeroone {
-      display: none;
-    }
-  }
 
   h1 {
     font-family: "Poppins";
@@ -35,6 +29,9 @@
     div {
       width: 65%;
       margin: auto;
+      .img-div {
+        margin-left: 0px;
+      }
     }
   }
   .page-heading::before {
@@ -73,8 +70,8 @@
       z-index: -1;
       position: absolute;
       background-color: rgba($primary, 0.4);
-      width: 300px;
-      height: 300px;
+      width: 40%;
+      height: 80%;
       border-radius: 50%;
       content: "";
       left: 50%;
@@ -85,13 +82,55 @@
       z-index: -2;
       position: absolute;
       background-color: rgba($gray-600, 0.2);
-      width: 400px;
-      height: 400px;
+      width: 55%;
+      height: 100%;
       border-radius: 50%;
       content: "";
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .features--text h1 {
+      font-size: 2.8rem;
+    }
+    .page-heading {
+      font-size: 4.2rem;
+    }
+    .features--img {
+      width: 80%;
+    }
+    * {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .features--text div .img-div {
+      margin: 0 auto;
+    }
+    .features--last {
+      margin-bottom: 7rem;
+    }
+    .features--text {
+      position: relative;
+    }
+    .features--text p::after {
+      content: "";
+      position: absolute;
+      background-color: #333;
+      opacity: 0.1;
+      height: 1px;
+      width: 300px;
+      bottom: 70px;
+      left: calc(50% - 150px);
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .features--text h1 {
+      font-size: 1.8rem;
+    }
+    .page-heading {
+      font-size: 3.6rem;
     }
   }
 }

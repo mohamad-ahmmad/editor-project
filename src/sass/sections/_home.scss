@@ -196,6 +196,19 @@
   .about-btn:hover::before {
     transform: scalex(0);
   }
+  @include media-breakpoint-down(lg) {
+    .intro--title {
+      font-size: 3.8rem;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .intro--title {
+      font-size: 3rem;
+    }
+    .intro--desc {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 @keyframes flashing {
