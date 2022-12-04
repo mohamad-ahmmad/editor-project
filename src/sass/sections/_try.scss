@@ -3,9 +3,43 @@
   background-image: linear-gradient(to bottom, $green-0, $secondary);
   font-family: "Poppins";
   .heading {
+    position: relative;
     font-weight: 700;
     text-align: center;
     padding: 4.5rem 0;
+
+    &::before {
+      content: "<";
+    }
+
+    &::after {
+      content: " />";
+    }
+
+    .lines {
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100px;
+        background-color: rgba($white, 0.5);
+        left: 49%;
+        top: 50%;
+        transform: translate(-200%, -50%);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100px;
+        background-color: rgba($white, 0.5);
+
+        right: 49%;
+        top: 50%;
+        transform: translate(200%, -50%);
+      }
+    }
   }
   .paragraph {
     text-align: center;
