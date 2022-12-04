@@ -1,6 +1,7 @@
 import "./sass/style.scss";
 import "./../node_modules/bootstrap/dist/js/bootstrap.min";
 import { animateTyping } from "./Animations.js";
+import { createPopper } from "@popperjs/core";
 
 const arr = [
   "print('Hello, World')",
