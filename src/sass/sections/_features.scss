@@ -60,11 +60,17 @@
   }
   &--text {
     margin-bottom: 100px;
+    position: relative;
+    .num {
+      position: absolute;
+      transform: translateY(-90%);
+    }
   }
 
   &--img {
     position: relative;
     z-index: 1;
+
     &::after,
     &::before {
       z-index: -1;
