@@ -14,7 +14,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, "index.html"),
-        login: resolve(root, "login", "index.html"),
+        codeEditor: resolve(root, "code-editor", "index.html"),
       },
     },
   },
