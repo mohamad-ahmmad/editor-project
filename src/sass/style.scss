@@ -1,5 +1,6 @@
 @import "./custom";
 
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 @import "./components/buttons";
 @import "./sections/navbar";
 @import "./sections/home";
@@ -8,6 +9,10 @@
 @import "./sections/try";
 @import "./login/login";
 @import "./sections/footer";
+@import "../code-editor/sass/style_code";
+// * {
+//   font-family: "Poppins";
+// }
 q a {
   text-decoration: none;
 }
