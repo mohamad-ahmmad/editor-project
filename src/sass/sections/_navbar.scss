@@ -53,4 +53,9 @@
       font-size: 0.8rem;
     }
   }
+  @include media-breakpoint-down(md) {
+    .nav--img {
+      width: 250px;
+    }
+  }
 }
