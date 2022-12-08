@@ -5,14 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" crossorigin src="assets/main.971838e9.js"></script>
-    <link rel="stylesheet" href="assets/style.aa099733.css" />
+    <script type="module" crossorigin src="/editor-project/assets/main.f9cce4db.js"></script>
+    <link rel="stylesheet" href="/editor-project/assets/style.d6d02f2b.css" />
   </head>
   <body>
     <div class="fluid-container">
-      <nav class="sticky-top navbar navbar-expand-lg bg-light navbar-custom">
+      <nav class="navbar navbar-expand-lg bg-light navbar-custom">
         <div class="container-fluid">
-          <a class="navbar-brand navbar-brand-custom" href="#">Navbar</a>
+          <a class="navbar-brand navbar-brand-custom" href="#">
+            <img
+              width="300px"
+              src="/editor-project/assets/logo-white.217b33c4.png"
+              alt="number one"
+              class="nav--img d-inline-block align-text-top"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -55,17 +62,15 @@
 
                   <form
                     action="backend/login.php"
-                    method="post"
+                    method ="POST"
                     class="home--login dropdown-menu p-3 dropdown-menu-end dropdown-menu-lg-start"
                   >
-               
-                   
                     <div class="mb-3">
                       <label for="uname" class="form-label"
                         >Email address</label
                       >
                       <input
-                        type="text"
+                        type="email"
                         class="form-control"
                         id="uname"
                         placeholder="email@example.com"
@@ -158,7 +163,7 @@
             <div class="col-md-6 mt-2">
               <div class="text-center">
                 <img
-                  src="/assets/coding3.3bd411e1.png"
+                  src="/editor-project/assets/coding3.3bd411e1.png"
                   alt="Coding "
                   class="img-custom img-fluid"
                 />
@@ -190,7 +195,7 @@
               <div class="features--img text-center">
                 <img
                   width="50%"
-                  src="assets/Free.a39572aa.png"
+                  src="/assets/Free.a39572aa.png"
                   alt="Arranging Files"
                   class="img-custom img-fluid"
                 />
@@ -252,7 +257,7 @@
               <div class="features--img text-center">
                 <img
                   width="50%"
-                  src="/dist/assets/Arranging.92294846.png"
+                  src="/assets/Arranging.92294846.png"
                   alt="Arranging Files"
                   class="img-custom img-fluid"
                 />
@@ -265,7 +270,7 @@
               <div class="features--img text-center">
                 <img
                   width="50%"
-                  src="/dist/assets/Language.56396e3e.png"
+                  src="/assets/Language.56396e3e.png"
                   alt="Arranging Files"
                   class="img-custom img-fluid"
                 />
@@ -297,7 +302,6 @@
           </div>
         </div>
       </section>
-
       <section id="sign-up" class="try">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
@@ -480,21 +484,80 @@
             d="M0,160L48,176C96,192,192,224,288,245.3C384,267,480,277,576,261.3C672,245,768,203,864,176C960,149,1056,139,1152,149.3C1248,160,1344,192,1392,208L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
           ></path>
         </svg>
-        <div class="container cus-pad-max">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-2">
+              <img
+                width="40%"
+                src="/editor-project/assets/js-svgrepo-com.b0ea82a8.svg"
+                alt="number one"
+                class="footer-img img-fluid"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                width="40%"
+                src="/assets/java-svgrepo-com.247d967f.svg"
+                alt="number one"
+                class="footer-img img-fluid"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                width="40%"
+                src="/assets/c-logo-svgrepo-com.a48df154.svg"
+                alt="number one"
+                class="footer-img img-fluid"
+              />
+            </div>
+            <div class="col-md-2">
+              <img
+                width="40%"
+                src="/assets/py-svgrepo-com.c7e179af.svg"
+                alt="number one"
+                class="footer-img img-fluid"
+              />
+            </div>
+          </div>
+          <div class="container cus-pad-max"></div>
           <div class="row">
             <div class="col-3">
               <div class="company" class="mx-2">
-                <h3>Company</h3>
+                <img
+                  width="80%"
+                  src="/assets/logo-white.217b33c4.png"
+                  alt="number one"
+                  class="img-fluid"
+                />
                 <p class="lh-lg">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  animi illum excepturi laboriosam, ad libero officia
-                  consequatur error tempora ab.
+                  Copyright © 2022 by Online-Editor, Inc. All rights reserved.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="mx-2">
+                <h3>Contact Us</h3>
+                <p class="lh-lg">
+                  An-Najah National University, Faculty of Engineering, First
+                  Floor, myEmail@gmail.com
                 </p>
               </div>
             </div>
             <div class="col-3">
+              <div class="mx-2">
+                <h3>Account</h3>
+                <ul>
+                  <li>
+                    <a href="#home">Login</a>
+                  </li>
+                  <li><a href="#sign-up">Sign Up</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-3">
               <div class="about-us mx-2">
-                <h3>About Us</h3>
+                <h3>SITE</h3>
                 <ul>
                   <li><a href="#home">Home</a></li>
                   <li><a href="#features">Features</a></li>
@@ -503,21 +566,10 @@
                 </ul>
               </div>
             </div>
-            <div class="col-3">
-              <div class="mx-2">
-                <h3>Products</h3>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="mx-2">
-                <h3>Contact Us</h3>
-              </div>
-            </div>
           </div>
         </div>
       </section>
     </div>
-
     <script src="https://unpkg.com/@popperjs/core@2"></script>
   </body>
 </html>

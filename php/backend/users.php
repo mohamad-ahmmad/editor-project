@@ -49,8 +49,6 @@ function Exists(){
     if ($result->num_rows > 0){
        
     while($row = $result->fetch_assoc()) {
-
-        
     if ( $row["email"] == $this->email &&  $row["Password"] == $this->password)
     {
        $this->type = $row["type"];
@@ -60,8 +58,9 @@ function Exists(){
     }     
 }
     
-
+return 0;
 }
+
 }
 
 
