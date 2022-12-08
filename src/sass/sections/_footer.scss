@@ -1,4 +1,7 @@
 .footer {
+  p {
+    color: $gray-500;
+  }
   h3 {
     letter-spacing: 0.5px;
   }
@@ -12,26 +15,33 @@
   color: $white;
   background-image: linear-gradient(to bottom, $secondary, $green-0);
   .cus-pad-max {
-    padding: 8.8rem 0;
+    padding: 4rem 0;
   }
 
-  .about-us {
-    ul {
-      padding: 0;
-      list-style-type: none;
+  ul {
+    padding: 0;
+    list-style-type: none;
+    color: $gray-500;
+    a {
+      text-decoration: none;
       color: $gray-500;
-      a {
-        text-decoration: none;
-        color: $gray-500;
-      }
-      li:not(:last-child) {
-        margin-bottom: 0.8rem;
-      }
-      li:hover,
-      a:hover {
-        color: $gray-100;
-        cursor: pointer;
-      }
     }
+    li:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+    li:hover,
+    a:hover {
+      color: $gray-100;
+      cursor: pointer;
+    }
+  }
+
+  .footer-img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+      brightness(102%) contrast(102%);
+  }
+  .footer-img:hover {
+    filter: invert(62%) sepia(48%) saturate(962%) hue-rotate(106deg)
+      brightness(92%) contrast(88%);
   }
 }

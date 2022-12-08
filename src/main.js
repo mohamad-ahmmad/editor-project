@@ -1,6 +1,6 @@
 import "./sass/style.scss";
 import "./../node_modules/bootstrap/dist/js/bootstrap.min";
-
+import { createPopper } from "@popperjs/core";
 import { animateTyping } from "./Animations.js";
 
 const arr = [
