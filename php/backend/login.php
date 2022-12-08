@@ -21,8 +21,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             $_SESSION['user_name'] = $user->name;
             $_SESSION['password'] = $user->password;
             $_SESSION['email'] = $user->email;
-            header("Location: home.php");
-
+            header("Location: ../home.php");
         }
         else {
             header("Location: ../index.php");

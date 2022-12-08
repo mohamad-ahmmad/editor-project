@@ -106,7 +106,7 @@
           </div>
           <div class="col-md-6 mt-2">
             <div class="text-center">
-              <img src="assets/coding3.3bd411e1.png" alt="Coding " class="img-custom img-fluid" />
+              <img src="/assets/coding3.3bd411e1.png" alt="Coding " class="img-custom img-fluid" />
             </div>
           </div>
         </div>
