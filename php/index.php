@@ -6,11 +6,11 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
-  <script type="module" crossorigin src="assets/main.971838e9.js"></script>
-  <link rel="stylesheet" href="assets/style.aa099733.css" />
+  <script type="module" crossorigin src="assets/main.f9cce4db.js"></script>
+  <link rel="stylesheet" href="assets/style.c8400453.css" />
 </head>
 
-<body>
+<body style="background-color: white">
   <div class="fluid-container">
     <nav class="sticky-top navbar navbar-expand-lg bg-light navbar-custom">
       <div class="container-fluid">
@@ -106,7 +106,7 @@
           </div>
           <div class="col-md-6 mt-2">
             <div class="text-center">
-              <img src="/assets/coding3.3bd411e1.png" alt="Coding " class="img-custom img-fluid" />
+              <img src="assets/coding3.3bd411e1.png" alt="Coding " class="img-custom img-fluid" />
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@
           </div>
           <div class="col-lg-6 order-first order-lg-last">
             <div class="features--img text-center">
-              <img width="50%" src="/dist/assets/Arranging.92294846.png" alt="Arranging Files" class="img-custom img-fluid" />
+              <img width="50%" src="assets/Arranging.92294846.png" alt="Arranging Files" class="img-custom img-fluid" />
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="features--img text-center">
-              <img width="50%" src="/dist/assets/Language.56396e3e.png" alt="Arranging Files" class="img-custom img-fluid" />
+              <img width="50%" src="assets/Language.56396e3e.png" alt="Arranging Files" class="img-custom img-fluid" />
             </div>
           </div>
           <div class="col-lg-6">

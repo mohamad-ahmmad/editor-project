@@ -16,7 +16,10 @@ document.querySelector("#playBtn").addEventListener("click", () => {
   data.append("code", code);
 
   let client = new XMLHttpRequest();
-  client.open("POST", "http://localhost/page/php/server/api/execute.php");
+  client.open(
+    "POST",
+    "http://localhost/code-editor/php/server/api/execute.php"
+  );
   client.send(data);
   client.onload = function () {
     outputBody.innerHTML = JSON.parse(this.responseText).data.replace(
