@@ -6,11 +6,13 @@ public $type;
 public $password;
 public $db;
 
-function __construct($db, $useremail, $password){
+function __construct($db, $useremail, $password, $name){
   $this->email=$useremail;
   $this->password=$password;
   $this->db=$db;
+  $this->name=$name;
 }
+
 function set_email($email) {
     $this->email = $email;
 }
@@ -59,6 +61,33 @@ function Exists(){
 }
     
 return 0;
+}
+function emailExists(){
+  $sql = "SELECT * FROM members";
+    $result = ($this->db)->query($sql);
+    if ($result->num_rows > 0){
+       
+    while($row = $result->fetch_assoc()) {
+    if ( $row["email"] == $this->email)
+    {
+        return 1;
+    }
+    else   if ( $row["Username"] == $this->name)
+    {
+        return 2;
+    }
+
+    }     
+}
+    
+return 0;
+
+}
+function insertUser(){
+  $sql = "INSERT INTO `members`(`email`, `Username`, `Password`, `Type`) VALUES ('".$this->email."','".$this->name."','".$this->password."','member')";
+  $result = ($this->db)->query($sql);
+return;
+
 }
 
 }

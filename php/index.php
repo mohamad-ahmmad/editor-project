@@ -42,7 +42,7 @@
 
                   <div class="mb-3">
                     <label for="uname" class="form-label">Email address</label>
-                    <input type="text" class="form-control" id="uname" placeholder="email@example.com" name="uname" />
+                    <input type="text" class="form-control" id="uname" placeholder="email@example.com" name="Email" />
                   </div>
                   <div>
                     <label for="password" class="form-label">Password</label>
@@ -210,45 +210,43 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#ffffff" fill-opacity="1" d="M0,160L48,186.7C96,213,192,267,288,266.7C384,267,480,213,576,170.7C672,128,768,96,864,106.7C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
       </svg>
-      <div class="container">
-        <h1 class="heading">Sign Up <span class="lines"></span></h1>
-        <div class="row mb-md-5 pb-md-5">
-          <div class="col-4">
-            <div class="lang-sup">
-              <h1 class="title">Coding</h1>
-              <p class="paragraph lh-md lead">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Numquam, sapiente? Fugit, beatae molestias provident suscipit
-                tempora natus hic sed veritatis nam voluptatibus corporis
-              </p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="dev-ux">
-              <h1 class="title">Developer UX</h1>
-              <p class="paragraph lh-md lead">
-                Developer experince one of most Lorem ipsum dolor sit, amet
-                consectetur adipisicing elit. Labore, porro.
-              </p>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="last">
-              <h1 class="title">Lorem, ipsum.</h1>
-              <p class="paragraph lh-lg lead">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Placeat debitis repellat sunt! Laboriosam blanditiis, maxime
-                necessitatibus asperiores inventore alias minus.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="text-center p-5">
-          <a href="" class="btn btn-primary btn-thic">
-            <span> Sign up for free</span>
-          </a>
+
+
+      
+      <div  class="container-fluid">
+      <div class="align-items-center justify-content-center row">
+        <div class="sign-label col-2">SIGN UP</div>
+        <div class="col-7"><div class="card ">
+        <div class="card-body">
+          <h5 class="card-title">Enter your information:</h5>
+          
+          <form method="post" action="backend/Signup.php">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email" type="email" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@example.com">
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username:</label>
+    <input name="username" type="text" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Username">
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input name="pass" type="password" class="mb-3 form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Create Account</button>
+</form>
+          
+
+
         </div>
       </div>
+      </div>
+      </div>
+      </div>
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#ffffff" fill-opacity="1" d="M0,160L48,186.7C96,213,192,267,288,266.7C384,267,480,213,576,170.7C672,128,768,96,864,106.7C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
       </svg>
@@ -325,17 +323,17 @@
         <path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,245.3C384,267,480,277,576,261.3C672,245,768,203,864,176C960,149,1056,139,1152,149.3C1248,160,1344,192,1392,208L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
       </svg>
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-2">
+        <div class="footer-imgs row justify-content-center">
+          <div class="cc col-md-2">
             <img width="40%" src="./imgs/js-svgrepo-com.svg" alt="number one" class="footer-img img-fluid" />
           </div>
-          <div class="col-md-2">
+          <div class="cc col-md-2">
             <img width="40%" src="./imgs/java-svgrepo-com.svg" alt="number one" class="footer-img img-fluid" />
           </div>
-          <div class="col-md-2">
+          <div class="cc col-md-2">
             <img width="40%" src="./imgs/c-logo-svgrepo-com.svg" alt="number one" class="footer-img img-fluid" />
           </div>
-          <div class="col-md-2">
+          <div class="cc col-md-2">
             <img width="40%" src="./imgs/py-svgrepo-com.svg" alt="number one" class="footer-img img-fluid" />
           </div>
         </div>
