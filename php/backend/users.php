@@ -6,12 +6,12 @@ public $type;
 public $password;
 public $db;
 
-function __construct($db, $useremail, $password, $name){
+function __construct($db, $useremail, $password){
   $this->email=$useremail;
   $this->password=$password;
   $this->db=$db;
-  $this->name=$name;
 }
+
 
 function set_email($email) {
     $this->email = $email;

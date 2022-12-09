@@ -17,15 +17,18 @@ if (isset($_POST['email']) && isset($_POST['username']) && isset($_POST['pass'])
       exit();
 
   }else{
-      $user = new User($conn, $Email, $Password, $UserName);
+      $user = new User($conn, $Email, $Password);
+      $user ->set_name($_POST['username']);
       if($user -> emailExists()==1){
 
-        header("Location: ../index.php?error=Email exists");
+        header("Location: /editor-project/php/index.php?error=Email Exists"); 
+        
         exit();
+        
       }
       else if($user -> emailExists()==2){
-
-        header("Location: ../index.php?error=Username exists");
+        header("Location: /editor-project/php/index.php?error=Username Exists"); 
+        
         exit();
       }
       else {

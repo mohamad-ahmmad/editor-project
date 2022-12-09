@@ -1,3 +1,14 @@
+@include media-breakpoint-down(sm) {
+  .home .row {
+    margin-right: 0px;
+  }
+  .nav--img {
+    width: 100px;
+  }
+}
+.nav--img {
+  width: 300px;
+}
 .footer {
   p {
     color: $gray-500;
@@ -44,4 +55,40 @@
     filter: invert(62%) sepia(48%) saturate(962%) hue-rotate(106deg)
       brightness(92%) contrast(88%);
   }
+  @include media-breakpoint-down(lg) {
+    .footer-text {
+      line-height: 15px;
+    }
+    .footer-img {
+      width: 60%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .footer-title {
+      font-size: 0.5px;
+    }
+    .footer-img {
+      width: 70%;
+      margin-bottom: 2px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .footer .cus-pad-max {
+      padding: 2rem 0;
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+      line-height: 15px;
+    }
+    .footer-title {
+      font-size: 0.5px;
+    }
+    .footer ul {
+      line-height: 5px;
+    }
+  }
+}
+.footer ul {
+  line-height: 5px;
 }

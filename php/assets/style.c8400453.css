@@ -9,6 +9,47 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2022 Fonticons, Inc.
  */
+
+@media (max-width: 991.98px) {
+  .footer .footer-text {
+    line-height: 15px;
+  }
+  .footer .footer-img {
+    width: 60%;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer .footer-title {
+    font-size: 0.5px;
+  }
+  .footer .footer-img {
+    width: 70%;
+    margin-bottom: 2px;
+  }
+}
+@media (max-width: 575.98px) {
+  .footer .footer-img {
+    width: 200px;
+    margin-bottom: 2px;
+  }
+  .footer .footer .cus-pad-max {
+    padding: 2rem 0;
+  }
+  .footer .footer-text {
+    font-size: 0.8rem;
+    line-height: 15px;
+  }
+  .footer .footer-title {
+    font-size: 0.5px;
+  }
+  .footer .footer ul {
+    line-height: 5px;
+  }
+}
+.footer ul {
+  line-height: 5px;
+}
+
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);
@@ -17919,15 +17960,6 @@ q a {
   color: #000;
   background-color: #0fcb83;
 }
-@media (max-width: 765px) {
-  .footer-img {
-    display: flex;
-    width: 15%;
-  }
-  .cc {
-    display: flex;
-  }
-}
 .card {
   background-color: #198754;
 }
@@ -17976,4 +18008,9 @@ q a {
 .sign-label:hover:after {
   opacity: 1;
   right: 10px;
+}
+@media (max-width: 765px) {
+  .footer-img {
+    width: 70%;
+  }
 }

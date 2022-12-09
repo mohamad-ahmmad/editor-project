@@ -5,8 +5,21 @@ include 'users.php';
 $Email = $_POST['Email'];
 $Password = $_POST['password'];
 
+
+
+if(!empty($_POST["remember"])) {
+	setcookie ("username",$_POST["Email"],time()+ 3600, "/");
+	setcookie ("password",$_POST["password"],time()+ 3600,"/");
+	echo "Cookies Set Successfuly";
+} else {
+	setcookie("username","",time()-3600,"/");
+	setcookie("password","",time()-3600,"/");
+}
+
+
+
 if (isset($_POST['Email']) && isset($_POST['password'])) { 
-    if ($UserName == "") {
+    if ($Email == "") {
         header("Location: ../index.php?error=Username is required");
         exit();
 
@@ -25,8 +38,9 @@ if (isset($_POST['Email']) && isset($_POST['password'])) {
             header("Location: /editor-project/php/code-editor/index.php");
         }
         else {
-            header("Location: ./index.php");
+            header("Location: /editor-project/php/index.php?error=Wrong Password");
             echo "wrong password";
+            exit();
         }
     }
 

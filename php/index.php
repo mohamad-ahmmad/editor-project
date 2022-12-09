@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +12,33 @@
 </head>
 
 <body style="background-color: white">
+<?php if (isset($_GET["error"]) && $_GET["error"] == 'Wrong Password') {
+
+echo '<div class="alert alert-danger mb-0" role="alert">
+<strong>Incorrect Email or Password!</strong>
+</div>';
+}
+?>
+<?php if (isset($_GET["error"]) && $_GET["error"] == 'Email Exists') {
+
+echo '<div class="alert alert-danger mb-0" role="alert">
+<strong>This email is already in use!</strong>
+</div>';
+}
+?>
+<?php if (isset($_GET["error"]) && $_GET["error"] == 'Username Exists') {
+
+echo '<div class="alert alert-danger mb-0" role="alert">
+<strong>This Username already exists!</strong>
+</div>';
+}
+?>
+
+
   <div class="fluid-container">
     <nav class="sticky-top navbar navbar-expand-lg bg-light navbar-custom">
       <div class="container-fluid">
-        <a class="navbar-brand navbar-brand-custom" href="#">Navbar</a>
+        <a class="navbar-brand navbar-brand-custom" href="index.php"> <img width="300px" src="./assets/logo-white.png" alt="Online Editor Logo" class="nav--img d-inline-block align-text-top img-fluid" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +52,7 @@
               <a class="nav-link" href="#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a style="margin-right:8px;" class=" nav-link" href="#faq">FAQ</a>
             </li>
 
             <li class="nav-item ms-6">
@@ -41,16 +65,16 @@
 
 
                   <div class="mb-3">
-                    <label for="uname" class="form-label">Email address</label>
-                    <input type="text" class="form-control" id="uname" placeholder="email@example.com" name="Email" />
+                    <label for="uname" class="form-label" >Email address</label>
+                    <input value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>" type="email" class="form-control" id="uname" placeholder="email@example.com" name="Email"  required/>
                   </div>
                   <div>
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" name="password" />
+                    <input required value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>"  type="password" class="form-control" id="password" placeholder="Password" name="password" />
                   </div>
                   <div class="mb-4">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="dropdownCheck2" />
+                      <input name="remember" type="checkbox" class="form-check-input" id="dropdownCheck2" />
                       <label class="form-check-label" for="dropdownCheck2">
                         Remember me
                       </label>
@@ -64,9 +88,9 @@
             </li>
 
             <li class="nav-item ms-2">
-              <button type="button" class="sign-up nav-link btn btn-outline-primary">
+              <a style="display:inline-block;" href="#sign-up" type="button" class="sign-up nav-link btn btn-outline-primary">
                 Signup
-              </button>
+              </a>
               <!-- <a class="sign-up nav-link btn btn-outline-primary" href="#"
                   >Sign up</a
                 > -->
@@ -220,15 +244,16 @@
         <div class="card-body">
           <h5 class="card-title">Enter your information:</h5>
           
-          <form method="post" action="backend/Signup.php">
+          <form class="form-floating" method="post" action="backend/Signup.php">
   <div class="form-group">
+
     <label for="exampleInputEmail1">Email address</label>
-    <input name="email" type="email" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@example.com">
+    <input required name="email" type="email" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@example.com">
    
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Username:</label>
-    <input name="username" type="text" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Username">
+    <input required name="username" type="text" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Username">
    
   </div>
   <div class="form-group">
@@ -236,7 +261,7 @@
     <input name="pass" type="password" class="mb-3 form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   
-  <button type="submit" class="btn btn-primary">Create Account</button>
+  <button  style="color:white; font-weight:600;" type="submit" class="btn btn-primary">Create Account</button>
 </form>
           
 
@@ -324,43 +349,43 @@
       </svg>
       <div class="container">
         <div class="footer-imgs row justify-content-center">
-          <div class="cc col-md-2">
+          <div class="cc col-2">
             <img width="40%" src="./imgs/js-svgrepo-com.svg" alt="number one" class="footer-img img-fluid" />
           </div>
-          <div class="cc col-md-2">
+          <div class="cc col-2">
             <img width="40%" src="./imgs/java-svgrepo-com.svg" alt="number one" class="footer-img img-fluid" />
           </div>
-          <div class="cc col-md-2">
+          <div class="cc col-2">
             <img width="40%" src="./imgs/c-logo-svgrepo-com.svg" alt="number one" class="footer-img img-fluid" />
           </div>
-          <div class="cc col-md-2">
+          <div class="cc col-2">
             <img width="40%" src="./imgs/py-svgrepo-com.svg" alt="number one" class="footer-img img-fluid" />
           </div>
         </div>
-        <div class="container cus-pad-max"></div>
-        <div class="row">
-          <div class="col-3">
+        <div class="container p-5"></div>
+        <div class="justify-content-center row">
+          <div class="col-3 justify-content-center ">
             <div class="company" class="mx-2">
-              <img width="80%" src="./imgs/logo-white.png" alt="number one" class="img-fluid" />
-              <p class="lh-lg">
+              <img width="80%" src="./assets/logo-white.png" alt="Online Editor Logo" class="img-fluid" />
+              <p class="footer-text lh-md">
                 Copyright © 2022 by Online-Editor, Inc. All rights reserved.
               </p>
             </div>
           </div>
 
-          <div class="col-3">
+          <div class="col-3 justify-content-center ">
             <div class="mx-2">
-              <h3>Contact Us</h3>
-              <p class="lh-lg">
+              <h3 class="footer--title">Contact Us</h3>
+              <p class="footer-text lh-md">
                 An-Najah National University, Faculty of Engineering, First
                 Floor, myEmail@gmail.com
               </p>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-3 justify-content-center ">
             <div class="mx-2">
-              <h3>Account</h3>
-              <ul>
+              <h3 class="footer--title">Account</h3>
+              <ul class="footer-text">
                 <li>
                   <a href="#home">Login</a>
                 </li>
@@ -368,10 +393,10 @@
               </ul>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-3 justify-content-center ">
             <div class="about-us mx-2">
-              <h3>SITE</h3>
-              <ul>
+              <h3 class="footer--title">SITE</h3>
+              <ul class="footer-text">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#sign-up">Sign Up</a></li>
@@ -385,6 +410,7 @@
   </div>
 
   <script src="https://unpkg.com/@popperjs/core@2"></script>
+
 </body>
 
 </html>
