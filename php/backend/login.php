@@ -2,11 +2,24 @@
 include 'dbconnect';
 include 'users.php';
 
-$UserName = $_POST['uname'];
+$Email = $_POST['Email'];
 $Password = $_POST['password'];
 
-if (isset($_POST['uname']) && isset($_POST['password'])) { 
-    if ($UserName == "") {
+
+
+if(!empty($_POST["remember"])) {
+	setcookie ("username",$_POST["Email"],time()+ 3600, "/");
+	setcookie ("password",$_POST["password"],time()+ 3600,"/");
+	echo "Cookies Set Successfuly";
+} else {
+	setcookie("username","",time()-3600,"/");
+	setcookie("password","",time()-3600,"/");
+}
+
+
+
+if (isset($_POST['Email']) && isset($_POST['password'])) { 
+    if ($Email == "") {
         header("Location: ../index.php?error=Username is required");
         exit();
 
@@ -16,22 +29,25 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
         exit();
 
     }else{
-        $user = new User($conn, $UserName, $Password);
+        $user = new User($conn, $Email, $Password);
         if($user -> Exists()==1){
+            session_start();
             $_SESSION['user_name'] = $user->name;
             $_SESSION['password'] = $user->password;
             $_SESSION['email'] = $user->email;
-            header("Location: ../home.php");
+            header("Location: /editor-project/php/code-editor/index.php");
         }
         else {
-            header("Location: ../index.php");
+            header("Location: /editor-project/php/index.php?error=Wrong Password");
             echo "wrong password";
+            exit();
         }
     }
 
 }
 else{
-    echo "HELLO WORLD";
+    header("Location: ../index.php?error=not Set");
+        exit();
 }
 
 
