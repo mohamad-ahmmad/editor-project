@@ -417,7 +417,6 @@ echo '<div class="alert alert-danger mb-0" role="alert">
       </div>
     </section>
   </div>
-
   <script src="https://unpkg.com/@popperjs/core@2"></script>
 
 </body>

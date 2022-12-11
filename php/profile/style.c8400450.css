@@ -1,0 +1,14 @@
+.profile-bdy {
+  background-color: #333;
+  color: #0fcb83;
+  font-family: "Poppins";
+}
+.hover-btn:hover {
+  opacity: 1;
+}
+.hover-btn {
+  opacity: 0.75;
+  transition: 0.5s;
+}
+.border-white-700 {
+}
