@@ -17963,52 +17963,40 @@ q a {
 .card {
   background-color: #198754;
 }
+.sign-label:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 180px;
+  background-color: #004241;
+  position: absolute;
+  left: calc(50% - 90px);
+  bottom: 1.5px;
+}
+.sign-label:after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 40px;
+  background-color: #0fcb83;
+  position: absolute;
+  left: calc(50% - 20px);
+  bottom: 0px;
+}
 .sign-label {
-  font-size: 3.6rem;
-
+  position: relative;
   font-weight: 600;
 }
 .sign-label {
-  background-color: #198754;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
   border: none;
   color: #fff;
   text-align: center;
-  font-size: 32px;
+  font-size: 3.6rem;
   padding: 16px;
-  width: 220px;
   transition: all 0.5s;
-  cursor: pointer;
   margin: 36px;
 }
 
-.sign-label {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transform: translateX(25%);
-  transition: 0.5s;
-}
-
-.sign-label:after {
-  content: "»";
-  position: absolute;
-  opacity: 0;
-  top: 14px;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.sign-label:hover {
-  padding-right: 24px;
-  padding-left: 8px;
-}
-
-.sign-label:hover:after {
-  opacity: 1;
-  right: 10px;
-}
 @media (max-width: 765px) {
   .footer-img {
     width: 70%;

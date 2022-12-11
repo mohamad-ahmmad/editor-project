@@ -238,9 +238,14 @@ echo '<div class="alert alert-danger mb-0" role="alert">
 
       
       <div  class="container-fluid">
+        <div class="row justify-content-center">
+          <div class=" sign-label col-md-12">
+          SIGN-UP
+          </div>
+        </div>
       <div class="align-items-center justify-content-center row">
-        <div class="sign-label col-2">SIGN UP</div>
-        <div class="col-7"><div class="card ">
+       
+        <div class="col-md-6"><div style="background-color: #006a4f;" class="card">
         <div class="card-body">
           <h5 class="card-title">Enter your information:</h5>
           
@@ -263,13 +268,17 @@ echo '<div class="alert alert-danger mb-0" role="alert">
   
   <button  style="color:white; font-weight:600;" type="submit" class="btn btn-primary">Create Account</button>
 </form>
-          
-
-
         </div>
+        
       </div>
+      
       </div>
+      <div class="col-md-3">
+      <img  src="./assets/sign-up.svg" alt="signing up picture" class="img-fluid" />
       </div>
+  
+      </div>
+     
       </div>
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
