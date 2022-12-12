@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,33 +5,33 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Code Compiler | Home</title>
   <script type="module" crossorigin src="assets/main.f9cce4db.js"></script>
   <link rel="stylesheet" href="assets/style.c8400453.css" />
 </head>
 
 <body style="background-color: white">
-<?php if (isset($_GET["error"]) && $_GET["error"] == 'Wrong Password') {
+  <?php if (isset($_GET["error"]) && $_GET["error"] == 'Wrong Password') {
 
-echo '<div class="alert alert-danger mb-0" role="alert">
+    echo '<div class="alert alert-danger mb-0" role="alert">
 <strong>Incorrect Email or Password!</strong>
 </div>';
-}
-?>
-<?php if (isset($_GET["error"]) && $_GET["error"] == 'Email Exists') {
+  }
+  ?>
+  <?php if (isset($_GET["error"]) && $_GET["error"] == 'Email Exists') {
 
-echo '<div class="alert alert-danger mb-0" role="alert">
+    echo '<div class="alert alert-danger mb-0" role="alert">
 <strong>This email is already in use!</strong>
 </div>';
-}
-?>
-<?php if (isset($_GET["error"]) && $_GET["error"] == 'Username Exists') {
+  }
+  ?>
+  <?php if (isset($_GET["error"]) && $_GET["error"] == 'Username Exists') {
 
-echo '<div class="alert alert-danger mb-0" role="alert">
+    echo '<div class="alert alert-danger mb-0" role="alert">
 <strong>This Username already exists!</strong>
 </div>';
-}
-?>
+  }
+  ?>
 
 
   <div class="fluid-container">
@@ -65,12 +64,16 @@ echo '<div class="alert alert-danger mb-0" role="alert">
 
 
                   <div class="mb-3">
-                    <label for="uname" class="form-label" >Email address</label>
-                    <input value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>" type="email" class="form-control" id="uname" placeholder="email@example.com" name="Email"  required/>
+                    <label for="uname" class="form-label">Email address</label>
+                    <input value="<?php if (isset($_COOKIE["username"])) {
+                                    echo $_COOKIE["username"];
+                                  } ?>" type="email" class="form-control" id="uname" placeholder="email@example.com" name="Email" required />
                   </div>
                   <div>
                     <label for="password" class="form-label">Password</label>
-                    <input required value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>"  type="password" class="form-control" id="password" placeholder="Password" name="password" />
+                    <input required value="<?php if (isset($_COOKIE["password"])) {
+                                              echo $_COOKIE["password"];
+                                            } ?>" type="password" class="form-control" id="password" placeholder="Password" name="password" />
                   </div>
                   <div class="mb-4">
                     <div class="form-check">
@@ -236,42 +239,43 @@ echo '<div class="alert alert-danger mb-0" role="alert">
       </svg>
 
 
-      
-      <div  class="container-fluid">
-      <div class="align-items-center justify-content-center row">
-        <div class="sign-label col-2">SIGN UP</div>
-        <div class="col-7"><div class="card ">
-        <div class="card-body">
-          <h5 class="card-title">Enter your information:</h5>
-          
-          <form class="form-floating" method="post" action="backend/Signup.php">
-  <div class="form-group">
 
-    <label for="exampleInputEmail1">Email address</label>
-    <input required name="email" type="email" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@example.com">
-   
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Username:</label>
-    <input required name="username" type="text" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Username">
-   
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input name="pass" type="password" class="mb-3 form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  
-  <button  style="color:white; font-weight:600;" type="submit" class="btn btn-primary">Create Account</button>
-</form>
-          
+      <div class="container-fluid">
+        <div class="align-items-center justify-content-center row">
+          <div class="sign-label col-2">SIGN UP</div>
+          <div class="col-7">
+            <div class="card ">
+              <div class="card-body">
+                <h5 class="card-title">Enter your information:</h5>
+
+                <form class="form-floating" method="post" action="backend/Signup.php">
+                  <div class="form-group">
+
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input required name="email" type="email" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@example.com">
+
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Username:</label>
+                    <input required name="username" type="text" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Username">
+
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input name="pass" type="password" class="mb-3 form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+
+                  <button style="color:white; font-weight:600;" type="submit" class="btn btn-primary">Create Account</button>
+                </form>
 
 
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-      </div>
-      </div>
-      
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#ffffff" fill-opacity="1" d="M0,160L48,186.7C96,213,192,267,288,266.7C384,267,480,213,576,170.7C672,128,768,96,864,106.7C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
       </svg>

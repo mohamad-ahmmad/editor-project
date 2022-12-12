@@ -12,3 +12,15 @@
 }
 .border-white-700 {
 }
+
+#option-dots {
+  transition: 0.4s;
+}
+
+#option-dots:hover {
+  cursor: pointer;
+  color: #81c2a9;
+}
+a {
+  text-decoration: none;
+}
