@@ -12,33 +12,33 @@ session_destroy();
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Code Compiler | Home</title>
   <script type="module" crossorigin src="assets/main.f9cce4db.js"></script>
   <link rel="stylesheet" href="assets/style.c8400453.css" />
 </head>
 
 <body style="background-color: white">
-<?php if (isset($_GET["error"]) && $_GET["error"] == 'Wrong Password') {
+  <?php if (isset($_GET["error"]) && $_GET["error"] == 'Wrong Password') {
 
-echo '<div class="alert alert-danger mb-0" role="alert">
+    echo '<div class="alert alert-danger mb-0" role="alert">
 <strong>Incorrect Email or Password!</strong>
 </div>';
-}
-?>
-<?php if (isset($_GET["error"]) && $_GET["error"] == 'Email Exists') {
+  }
+  ?>
+  <?php if (isset($_GET["error"]) && $_GET["error"] == 'Email Exists') {
 
-echo '<div class="alert alert-danger mb-0" role="alert">
+    echo '<div class="alert alert-danger mb-0" role="alert">
 <strong>This email is already in use!</strong>
 </div>';
-}
-?>
-<?php if (isset($_GET["error"]) && $_GET["error"] == 'Username Exists') {
+  }
+  ?>
+  <?php if (isset($_GET["error"]) && $_GET["error"] == 'Username Exists') {
 
-echo '<div class="alert alert-danger mb-0" role="alert">
+    echo '<div class="alert alert-danger mb-0" role="alert">
 <strong>This Username already exists!</strong>
 </div>';
-}
-?>
+  }
+  ?>
 
 
   <div class="fluid-container">
@@ -71,12 +71,16 @@ echo '<div class="alert alert-danger mb-0" role="alert">
 
 
                   <div class="mb-3">
-                    <label for="uname" class="form-label" >Email address</label>
-                    <input value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>" type="email" class="form-control" id="uname" placeholder="email@example.com" name="Email"  required/>
+                    <label for="uname" class="form-label">Email address</label>
+                    <input value="<?php if (isset($_COOKIE["username"])) {
+                                    echo $_COOKIE["username"];
+                                  } ?>" type="email" class="form-control" id="uname" placeholder="email@example.com" name="Email" required />
                   </div>
                   <div>
                     <label for="password" class="form-label">Password</label>
-                    <input required value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>"  type="password" class="form-control" id="password" placeholder="Password" name="password" />
+                    <input required value="<?php if (isset($_COOKIE["password"])) {
+                                              echo $_COOKIE["password"];
+                                            } ?>" type="password" class="form-control" id="password" placeholder="Password" name="password" />
                   </div>
                   <div class="mb-4">
                     <div class="form-check">

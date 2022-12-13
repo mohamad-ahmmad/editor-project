@@ -1,11 +1,11 @@
 <?php
-// session_start();
-// if (!isset($_SESSION['user_name'])) {
-//   header("LOCATION: ../index.php");
-// }
-// if (!isset($_GET['lang']) && !isset($_GET['project']) && empty($_GET['project']) && empty($_GET['lang'])) {
-//   header("LOCATION : ../profile/page.php?id=" . $_GET["user_name"]);
-// }
+session_start();
+if (!isset($_SESSION['user_name'])) {
+  header("LOCATION: ../index.php");
+}
+if (!isset($_GET['lang']) && !isset($_GET['project']) && empty($_GET['project']) && empty($_GET['lang'])) {
+  header("LOCATION : ../profile/page.php?id=" . $_GET["user_name"]);
+}
 
 ?>
 <!DOCTYPE html>
