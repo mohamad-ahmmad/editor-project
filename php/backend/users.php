@@ -51,11 +51,17 @@ function Exists(){
     if ($result->num_rows > 0){
        
     while($row = $result->fetch_assoc()) {
-    if ( $row["email"] == $this->email &&  $row["Password"] == $this->password)
+    if ( $row["email"] == $this->email &&  $row["Password"] == $this->password && $row["Type"]!="admin")
     {
        $this->type = $row["type"];
        $this->name = $row["Username"];
         return 1;
+    }
+    else if ( $row["email"] == $this->email &&  $row["Password"] == $this->password && $row["Type"]=="admin")
+    {
+       $this->type = $row["type"];
+       $this->name = $row["Username"];
+        return 2;
     }
     }     
 }

@@ -3366,16 +3366,24 @@ document.querySelector("#playBtn").addEventListener("click", () => {
   const s = codeEditor.getValue(),
     t = document.querySelector("#output--body");
   let e = new FormData();
+<<<<<<< HEAD
   const k = document.getElementById("editor-lang").value;
   const i = document.getElementById("project-id").value;
   e.append("type", k);
   e.append("code", s);
   e.append("id", i);
 
+=======
+  e.append("type", "py"), e.append("code", s);
+>>>>>>> e7a5e432c05c474e53712e7f3744b10c7b9fa8cf
   let n = new XMLHttpRequest();
   n.open("POST", "http://localhost/editor-project/php/server/api/execute.php"),
     n.send(e),
     (n.onload = function () {
+<<<<<<< HEAD
+=======
+      console.log(this.responseText);
+>>>>>>> e7a5e432c05c474e53712e7f3744b10c7b9fa8cf
       t.innerHTML = JSON.parse(this.responseText).data.replace(
         /(?:\r\n|\r|\n)/g,
         "<br>"

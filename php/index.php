@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+session_unset();
+
+session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -239,43 +246,49 @@
       </svg>
 
 
-
-      <div class="container-fluid">
-        <div class="align-items-center justify-content-center row">
-          <div class="sign-label col-2">SIGN UP</div>
-          <div class="col-7">
-            <div class="card ">
-              <div class="card-body">
-                <h5 class="card-title">Enter your information:</h5>
-
-                <form class="form-floating" method="post" action="backend/Signup.php">
-                  <div class="form-group">
-
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input required name="email" type="email" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@example.com">
-
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Username:</label>
-                    <input required name="username" type="text" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Username">
-
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input name="pass" type="password" class="mb-3 form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-
-                  <button style="color:white; font-weight:600;" type="submit" class="btn btn-primary">Create Account</button>
-                </form>
-
-
-
-              </div>
-            </div>
+      
+      <div  class="container-fluid">
+        <div class="row justify-content-center">
+          <div class=" sign-label col-md-12">
+          SIGN-UP
           </div>
         </div>
-      </div>
+      <div class="align-items-center justify-content-center row">
+       
+        <div class="col-md-6"><div style="background-color: transparent; border: none" class="card">
+        <div class="card-body">
+          <h5 class="card-title">Enter your information:</h5>
+          
+          <form class="form-floating" method="post" action="backend/Signup.php">
+  <div class="form-group">
 
+    <label for="exampleInputEmail1">Email address</label>
+    <input required name="email" type="email" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@example.com">
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username:</label>
+    <input required name="username" type="text" class="mb-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Username">
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input required name="pass" type="password" class="mb-3 form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  
+  <button  style="color:white; font-weight:600;" type="submit" class="btn btn-primary">Create Account</button>
+</form>
+        </div>
+        
+      </div>
+      
+      </div>
+     
+  
+      </div>
+     
+      </div>
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#ffffff" fill-opacity="1" d="M0,160L48,186.7C96,213,192,267,288,266.7C384,267,480,213,576,170.7C672,128,768,96,864,106.7C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
       </svg>
