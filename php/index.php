@@ -1,4 +1,10 @@
+<?php
+session_start();
 
+session_unset();
+
+session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -245,7 +251,7 @@ echo '<div class="alert alert-danger mb-0" role="alert">
         </div>
       <div class="align-items-center justify-content-center row">
        
-        <div class="col-md-6"><div style="background-color: #006a4f;" class="card">
+        <div class="col-md-6"><div style="background-color: transparent; border: none" class="card">
         <div class="card-body">
           <h5 class="card-title">Enter your information:</h5>
           
@@ -273,9 +279,7 @@ echo '<div class="alert alert-danger mb-0" role="alert">
       </div>
       
       </div>
-      <div class="col-md-3">
-      <img  src="./assets/sign-up.svg" alt="signing up picture" class="img-fluid" />
-      </div>
+     
   
       </div>
      
