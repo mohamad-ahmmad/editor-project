@@ -1,6 +1,5 @@
 <?php
 session_start();
-<<<<<<< HEAD
 require_once("../backend/dbconnect.php");
 if (!isset($_SESSION['user_name'])) {
   header("LOCATION: ../index.php");
@@ -8,12 +7,6 @@ if (!isset($_SESSION['user_name'])) {
 if (!isset($_GET['lang']) && !isset($_GET['project']) && empty($_GET['project']) && empty($_GET['lang'])) {
   header("LOCATION : ../profile/page.php?id=" + $_GET["user_name"]);
 }
-=======
-if (!isset($_SESSION['user_name'])) {
-  header("LOCATION: ../index.php");
-}
-
->>>>>>> e7a5e432c05c474e53712e7f3744b10c7b9fa8cf
 
 ?>
 <!DOCTYPE html>
@@ -120,11 +113,8 @@ $display_name = $row['proj_name'];
     codeEditor.setTheme("ace/theme/monokai");
 
     // Set language
-<<<<<<< HEAD
-    codeEditor.session.setMode("ace/mode/<?php echo $display_lang == "Javascript" ? "javascript" : "python" ?>");
-=======
-    codeEditor.session.setMode("ace/mode/javascript");
->>>>>>> e7a5e432c05c474e53712e7f3744b10c7b9fa8cf
+
+    codeEditor.session.setMode("ace/mode/<?php echo $display_lang == "Javascript" ? "javascript" : "python" ?>"); ===
 
     // Set Options
     // codeEditor.setOptions({
