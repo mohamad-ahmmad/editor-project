@@ -1,5 +1,5 @@
 <?php
-function cardLoader($projectId, $projectTitle, $projectBio)
+function cardLoader($projectId, $projectTitle, $projectBio,$lang)
 {
      ?>
           <div class="card bg-transparent mb-3" style="border-color: rgba(255, 255, 255, 0.486)">
@@ -15,7 +15,7 @@ function cardLoader($projectId, $projectTitle, $projectBio)
                   <div class="card-body position-relative">
                     <input type="text" name="project-id" value="<?php echo $projectId; ?>" hidden>
                  <h5 class="card-title fw-bolder fs-3">
-                      <?php echo $projectTitle; ?> 
+                    <a href="../code-editor/index.php?lang=<?php echo $lang; ?>&project=<?php echo $projectId ?>">  <?php echo $projectTitle; ?></a> 
                     </h5>
                     <p class="card-text lead text-white fs-5">
                       <?php echo $projectBio; ?>
@@ -44,5 +44,16 @@ function cardLoader($projectId, $projectTitle, $projectBio)
     <?php 
     
 }
+$user_email = $_SESSION['email'];
 
-$sql = "SELECT * FROM codes";
+$sql = "SELECT * FROM codes WHERE user_email='$user_email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    cardLoader($row['ID'],$row['proj_name'],$row['project_bio'], $row['extention']);
+  }
+}else{
+
+}

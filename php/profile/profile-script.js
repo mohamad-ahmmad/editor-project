@@ -19,7 +19,6 @@ function setModalData(
 
   document.getElementById("req_type").value = reqType;
   document.getElementById("project-id").value = projectId;
-  console.log(document.getElementById("project-id").value);
 }
 
 //iterating on projects to map each project with a Listener that changes the href of the Delete Modal

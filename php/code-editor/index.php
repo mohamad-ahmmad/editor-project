@@ -1,11 +1,12 @@
 <?php
-// session_start();
-// if (!isset($_SESSION['user_name'])) {
-//   header("LOCATION: ../index.php");
-// }
-// if (!isset($_GET['lang']) && !isset($_GET['project']) && empty($_GET['project']) && empty($_GET['lang'])) {
-//   header("LOCATION : ../profile/page.php?id=" + $_GET["user_name"]);
-// }
+session_start();
+require_once("../backend/dbconnect.php");
+if (!isset($_SESSION['user_name'])) {
+  header("LOCATION: ../index.php");
+}
+if (!isset($_GET['lang']) && !isset($_GET['project']) && empty($_GET['project']) && empty($_GET['lang'])) {
+  header("LOCATION : ../profile/page.php?id=" + $_GET["user_name"]);
+}
 
 ?>
 <!DOCTYPE html>
@@ -15,12 +16,31 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Code Editor | Python Name</title>
+  <title>Code Editor</title>
   <script type="module" crossorigin src="../assets/codeEditor.3a43f70e.js"></script>
   <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
   <link rel="modulepreload" crossorigin href="../assets/index.01827639.js" />
   <link rel="stylesheet" href="../assets/style.c8400453.css" />
 </head>
+<?php
+
+$user_email = $_SESSION['email'];
+$user_project_id = $_GET['project'];
+$user_project_lang = $_GET['lang'];
+$sql = "SELECT * FROM codes WHERE user_email='$user_email' and ID = $user_project_id";
+$result = $conn->query($sql);
+if ($result->num_rows == 0)
+  header("LOCATION : ../profile/page.php");
+
+$row = $result->fetch_assoc();
+$code = $row['code'];
+$extention = $row['extention'];
+$display_lang =  $extention == 'js' ? "Javascript" : "Python";
+$display_name = $row['proj_name'];
+
+
+
+?>
 
 <body class="code-editor">
   <div class="grouper">
@@ -29,14 +49,14 @@
         <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
           <i class="fa-solid fa-bars"></i>
         </a>
-        <div>Language / Your Project Name</div>
+        <div><?php echo $display_lang; ?> / <?php echo $display_name; ?></div>
       </div>
       <div>
         <!-- Play Button And Profile Button                   -->
 
         <div class="d-flex gap-4">
           <span style="cursor: pointer" id="playBtn"><i class="fa-solid fa-play"></i></span>
-          <span> <i class="fa-solid fa-user"></i> </span>
+          <a href="../profile/page.php"> <span style="cursor: pointer"> <i class="fa-solid fa-user"></i> </span></a>
         </div>
       </div>
 
@@ -50,13 +70,22 @@
         <div class="offcanvas-body">
           <div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <a href="">First Project</a>
-              </li>
-              <li class="list-group-item">
-                <a href="">Second Snippets</a>
-              </li>
-              <li class="list-group-item"><a href="">Third Code</a></li>
+              <?php
+
+              $sql = "SELECT * FROM codes WHERE user_email='$user_email'";
+              $result = $conn->query($sql);
+
+              while ($row = $result->fetch_assoc()) {
+
+
+              ?>
+                <li class="list-group-item">
+                  <a href="index.php?lang=<?php echo $row['extention']; ?>&project=<?php echo $row['ID']; ?>"><?php echo $row['proj_name']; ?></a>
+                </li>
+              <?php } ?>
+
+              <input id="editor-lang" type="text" hidden value="<?php echo $extention; ?>">
+              <input id="project-id" type="text" hidden value="<?php echo $user_project_id; ?>">
             </ul>
           </div>
         </div>
@@ -64,7 +93,9 @@
     </nav>
 
     <div class="cus">
-      <div id="editor"></div>
+      <div id="editor">
+        <?php echo $code; ?>
+      </div>
 
       <div style="overflow-y: scroll" class="output" id="output">
         <span class="output--title"><span class="green-color">$output</span> :
@@ -82,7 +113,7 @@
     codeEditor.setTheme("ace/theme/monokai");
 
     // Set language
-    codeEditor.session.setMode("ace/mode/python");
+    codeEditor.session.setMode("ace/mode/<?php echo $display_lang == "Javascript" ? "javascript" : "python" ?>");
 
     // Set Options
     // codeEditor.setOptions({
@@ -95,3 +126,4 @@
 </body>
 
 </html>
+<?php $conn->close();

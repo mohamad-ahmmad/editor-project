@@ -45,12 +45,7 @@ class PythonLang
         fwrite($tempFile, $code);
 
         $consoleCompiled = `python temp.py`;
-        unlink('temp.py');
 
         return $consoleCompiled;
     }
 }
-
-// $ref = new Executor();
-// $output = $ref->execute(new PythonLang(), "print('Hello World')");
-// echo ($output);
