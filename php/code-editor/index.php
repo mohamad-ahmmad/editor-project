@@ -5,7 +5,7 @@ if (!isset($_SESSION['user_name'])) {
   header("LOCATION: ../index.php");
 }
 if (!isset($_GET['lang']) && !isset($_GET['project']) && empty($_GET['project']) && empty($_GET['lang'])) {
-  header("LOCATION : ../profile/page.php?id=" + $_GET["user_name"]);
+  header("LOCATION : ../profile/page.php");
 }
 
 ?>
@@ -114,7 +114,7 @@ $display_name = $row['proj_name'];
 
     // Set language
 
-    codeEditor.session.setMode("ace/mode/<?php echo $display_lang == "Javascript" ? "javascript" : "python" ?>"); ===
+    codeEditor.session.setMode("ace/mode/<?php echo $display_lang == "Javascript" ? "javascript" : "python" ?>");
 
     // Set Options
     // codeEditor.setOptions({
