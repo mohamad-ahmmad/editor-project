@@ -1,6 +1,6 @@
 
 <?php
-include 'dbconnect';
+include 'dbconnect.php';
 include 'users.php';
 
 $Email = $_POST['Email'];

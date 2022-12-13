@@ -273,7 +273,7 @@ session_destroy();
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input name="pass" type="password" class="mb-3 form-control" id="exampleInputPassword1" placeholder="Password">
+    <input required name="pass" type="password" class="mb-3 form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   
   <button  style="color:white; font-weight:600;" type="submit" class="btn btn-primary">Create Account</button>

@@ -1,5 +1,5 @@
 <?php
-include "../backend/dbconnect";
+include "../backend/dbconnect.php";
 include "../backend/users.php";
 session_start();
 
@@ -128,17 +128,15 @@ if(isset($_GET['sourcee'])){
     <tbody>
      
       <?php
-      $result = mysqli_query($conn,"SELECT * FROM members");
-      $em = mysqli_fetch_array($result);
-
-$result2 = mysqli_query($conn,"SELECT COUNT(ID) as data FROM codes where User_Email = '" .$em['email']."'");
-$number = mysqli_fetch_array($result2);
+      $result = mysqli_query($conn,"SELECT * FROM members where type !='admin'");
 mysqli_data_seek($result, 0);
 $counter =1;
 
     while($row = mysqli_fetch_array($result))
 {
-  if($row['Type']!="admin"){
+  $result2 = mysqli_query($conn,"SELECT COUNT(ID) as data FROM codes where User_Email = '" .$row['email']."'");
+  $number = mysqli_fetch_array($result2);
+  if($row['Type']!="admin")
 echo "<tr>";
 echo "<th scope=\"row\">".$counter."</th>";
 $counter++;
@@ -166,20 +164,20 @@ echo "<td>" . $number['data'] . "</td>";
       <div class="form-group row">
       <label for="inputName" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input  name="name" type="text" class="form-control" id="inputName" value="<?php echo $_GET['name'] ?>">
+      <input required  name="name" type="text" class="form-control" id="inputName" value="<?php echo $_GET['name'] ?>">
     </div>
   </div>
       <div class="form-group row">
       <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input  name="email" type="email" class="form-control" id="inputEmail" value="<?php echo $_GET['email'] ?>">
+      <input required name="email" type="email" class="form-control" id="inputEmail" value="<?php echo $_GET['email'] ?>">
     </div>
   </div>
 
   <div class="form-group row">
   <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input  name="password" type="password" class="form-control" id="inputPassword" value="<?php echo $_GET['pass'] ?>">
+      <input required name="password" type="password" class="form-control" id="inputPassword" value="<?php echo $_GET['pass'] ?>">
     </div>
   </div>
 
@@ -226,7 +224,7 @@ echo "<td>" . $number['data'] . "</td>";
   <div class="form-group row">
   <label for="InputName2" class="col-sm-2 col-form-label">Name:</label>
     <div class="col-sm-10">
-      <input name="newname" type="text" class="form-control" id="InputName2">
+      <input required name="newname" type="text" class="form-control" id="InputName2">
       <input type="hidden"  name="sourcee" value="Change Name">
       <input type="hidden"  name="user_name" value="<?php echo $_SESSION['user_name']; ?>">
     </div>
@@ -260,7 +258,7 @@ echo "<td>" . $number['data'] . "</td>";
   <div class="form-group row">
   <label for="InputPass2" class="col-sm-2 col-form-label">Password:</label>
     <div class="col-sm-10">
-      <input name="newpass" type="text" class="form-control" id="InputPass2">
+      <input required name="newpass" type="text" class="form-control" id="InputPass2">
       <input type="hidden"  name="sourcee" value="Change Pass">
       <input type="hidden"  name="user_name" value="<?php echo $_SESSION['user_name']; ?>">
     </div>
@@ -278,7 +276,7 @@ echo "<td>" . $number['data'] . "</td>";
 
 <?php
 echo "</tr>";
-}
+
 }
 
 ?>
